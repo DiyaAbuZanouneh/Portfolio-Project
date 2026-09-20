@@ -1,61 +1,171 @@
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 /* Variables */
 :root {
- --bg:#F4F6F9; /* For Background Color */
- --border:#D3DCE6;  /* For Border */
- --text:#0F1720; /* For Main Text */
- --text-2:#4E5B69; /* For Secondary Text */
- --text-3:#6B7A8C; /* For Footer + Hello There Text */
- --accent:#1E5FA8; /* For Buttons */
- --accent-hover:#164A85; /* For Buttons Hover */
- --accent-ink:#ffffff; /* For Any Text Background Blue */
- --focus:#A8C8EA; /* For Card Focus */
+  --bg: #f4f6f9; /* For Background Color */
+  --surface: #e7ecf2; /* For Background Cards */
+  --border: #d3dce6; /* For Border */
+  --text: #0f1720; /* For Main Text */
+  --text-2: #4e5b69; /* For Secondary Text */
+  --text-3: #6b7a8c; /* For Footer + Hello There Text */
+  --accent: #1e5fa8; /* For Buttons */
+  --accent-hover: #164a85; /* For Buttons Hover */
+  --accent-ink: #ffffff; /* For Any Text Background Blue */
+  --focus: #a8c8ea; /* For Card Focus */
+}
+
+/* Html */
+html {
+    scroll-behavior: smooth;
 }
 
 /* Body */
 body {
-    background: var(--bg);
-    color: var(--text);
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    line-height: 1.3;
+  background: var(--bg);
+  color: var(--text);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.3;
+}
+
+/* Section */
+section {
+  margin-top: 150px;
 }
 
 /* Header Section */
 .header-site {
-    display: flex;
-    justify-content: space-between;
-    border: 2px solid var(--border);
+  display: flex;
+  justify-content: space-between;
+  border: 2px solid var(--border);
 }
 
 .logo {
-    font-size: larger;
-    font-weight: 600;
-    margin: 10px 20px;
+  font-size: larger;
+  font-weight: 600;
+  margin: 10px 20px;
 }
 
 .nav-links {
-    display: flex;
-    justify-content: space-between;
-    gap: 28px;
-    list-style-type: none;
-    margin: 10px 20px;
-    font-weight: 600;
+  display: flex;
+  justify-content: space-between;
+  gap: 28px;
+  list-style-type: none;
+  margin: 10px 4cap;
+  font-weight: 600;
 }
 
 .links {
-    text-decoration: none;
-    color: var(--text-2);
-    display: inline-block;
-    transition: transform 0.3s ease, color 0.3s ease;
+  text-decoration: none;
+  color: var(--text-2);
+  display: inline-block;
+  transition:
+    transform 0.3s ease,
+    color 0.3s ease;
 }
 
 .links:hover {
-    transform:  translateY(-4px);
-    color: var(--accent);
+  transform: translateY(-4px);
+  color: var(--accent);
 }
 
+/* Main Section */
+.main-site {
+  margin: 10px 40px;
+}
+
+/* Hero Section */
+.hero-site {
+  display: flex;
+  justify-content: space-between;
+}
+
+.hero-img {
+  display: inline-block;
+}
+
+.hero-img img {
+  width: 350px;
+  height: 350px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 70px;
+  border: 3px solid var(--border);
+  transition:
+    transform 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.hero-img img:hover {
+  transform: translateY(-4px);
+  border-color: var(--accent);
+  cursor: pointer;
+}
+
+.hero-description {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  line-height: 1.6;
+}
+
+.hero-title p {
+  color: var(--accent);
+  background: var(--surface);
+  display: inline-block;
+  padding: 10px;
+  border: var(--border) solid 2px;
+  border-radius: 10px;
+  transition:
+    transform 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.hero-title p:hover {
+  transform: translateY(-4px);
+  border-color: var(--accent);
+  cursor: pointer;
+}
+
+.hello-there {
+  color: var(--text-3);
+}
+
+.name {
+  color: var(--text);
+  font-weight: 600;
+  font-size: xx-large;
+}
+
+.web {
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.major {
+  color: var(--text-2);
+}
+
+.hero-btn a {
+  display: inline-block;
+  border: 2px solid var(--border);
+  border-radius: 10px;
+  padding: 12px;
+  color: var(--accent-ink);
+  background: var(--accent);
+  font-weight: 600;
+  text-decoration: none;
+  transition:
+    transform 0.3s ease,
+    background 0.3s ease;
+}
+
+.hero-btn a:hover {
+    transform: translateY(-4px);
+    background: var(--accent-hover);
+}
+
+/* Technical Skills & Tools Section */
