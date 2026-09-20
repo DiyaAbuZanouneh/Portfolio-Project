@@ -169,3 +169,48 @@ section {
 }
 
 /* Technical Skills & Tools Section */
+.tech-site {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.tech-title {
+    text-align: center;
+}
+
+.tech-title h1{
+    display: inline-block;
+    border-bottom: 4px solid var(--accent-hover);
+}
+
+.tech-cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    background: var(--accent-ink);
+    transition: transform 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+}
+
+.card img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+    margin-bottom: 10px;
+}
+
+/* Projects Section */
