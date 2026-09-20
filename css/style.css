@@ -41,6 +41,14 @@ section {
   display: flex;
   justify-content: space-between;
   border: 2px solid var(--border);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(244, 246, 249, 0.7);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  z-index: 5;
 }
 
 .logo {
@@ -378,8 +386,8 @@ section {
   color: var(--text);
   text-decoration: none;
   transition:
-    transform 0.2s ease,
-    background 0.2s ease;
+    transform 0.3s ease,
+    background 0.3s ease;
 }
 
 .connect-icon:hover {
@@ -403,4 +411,89 @@ section {
 }
 .connect-icon.linkedin {
   color: #0a66c2;
+}
+
+/* Footer Section */
+.footer-site {
+  border: 2px solid var(--border);
+  text-align: center;
+}
+
+.name p {
+  font-family: var(--text-3);
+  font-weight: 300;
+  font-size: small;
+  padding: 15px 0;
+}
+
+/* Media Query */
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .hero-site {
+    flex-direction: column-reverse;
+    align-items: center;
+    text-align: center;
+    gap: 30px;
+  }
+
+  .hero-img img {
+    margin-right: 0;
+    width: 250px;
+    height: 250px;
+  }
+
+  .hero-description {
+    align-items: center;
+  }
+
+  .tech-cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .volunteering-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .project-card {
+    margin: 0 60px;
+  }
+}
+
+/* Phone */
+@media (max-width: 768px) {
+  .nav-site {
+    display: none;
+  }
+
+  .header-site {
+    justify-content: center;
+  }
+
+  section {
+    margin-top: 100px;
+  }
+
+  .tech-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .volunteering-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .project-card {
+    margin: 0 20px;
+    padding: 30px 20px;
+  }
+
+  .connect-icons {
+    gap: 16px;
+  }
+
+  .connect-icon {
+    width: 60px;
+    height: 60px;
+    font-size: 1.4rem;
+  }
 }
