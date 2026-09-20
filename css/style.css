@@ -335,3 +335,72 @@ section {
   line-height: 1.5;
 }
 
+/* Connect Section */
+.connect {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.connect-title p {
+  display: inline-block;
+  font-size: 2.5rem;
+  font-weight: 800;
+  border-bottom: 4px solid var(--accent-hover);
+  padding-bottom: 8px;
+}
+
+.connect-subtitle {
+  max-width: 500px;
+  color: var(--text-2);
+  margin-bottom: 20px;
+}
+
+.connect-icons {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.connect-icon {
+  width: 70px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: var(--border);
+  font-size: 1.6rem;
+  color: var(--text);
+  text-decoration: none;
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease;
+}
+
+.connect-icon:hover {
+  transform: translateY(-4px);
+  background: var(--focus);
+  cursor: pointer;
+}
+
+/* Brand colors */
+.connect-icon.facebook {
+  color: #1877f2;
+}
+.connect-icon.github {
+  color: #181717;
+}
+.connect-icon.gmail {
+  color: #ea4335;
+}
+.connect-icon.phone {
+  color: #0f1720;
+}
+.connect-icon.linkedin {
+  color: #0a66c2;
+}
